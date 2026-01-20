@@ -6,3 +6,85 @@
     box-sizing: border-box;
     font-family: "Inter", sans-serif;
 }
+
+html {
+    font-size: 16px;
+}
+
+body {
+    max-width: 1280px;
+}
+
+/* shared style */
+.container {
+    width: 90%;
+    margin: 0 auto;
+    border: 1px solid red;
+}
+
+.text-gradient {
+    background: linear-gradient(to top, #F7E93F, #FB09B4, #9100F8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.btn-primary {
+    padding: 10px 20px;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    color: #fff;
+    background: linear-gradient(to top right, #F7E93F, #FB09B4, #9100F8);
+}
+
+/* main style */
+
+/* Navbar style */
+header {
+    border: 1px solid blue;
+    background-color: antiquewhite;
+}
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid rebeccapurple;
+}
+
+nav > ul {
+    display: flex;
+    gap: 2rem;
+}
+
+header nav li {
+    list-style: none;
+}
+
+header nav li a {
+    text-decoration: none;
+    color:  #FFF;
+    opacity: 0.9;
+}
+
+nav > span {
+    display: none;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 576px) {
+    nav ul {
+        display: none;
+    }
+
+    .btn-subscribe {
+        display: none;
+    }
+
+    nav > span {
+        display: inline;
+    }
+}
