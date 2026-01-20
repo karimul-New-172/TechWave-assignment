@@ -29,28 +29,66 @@ body {
 }
 
 .btn-primary {
+    background: linear-gradient(to top right, #F7E93F, #FB09B4, #9100F8);
     padding: 10px 20px;
     border: 1px solid transparent;
     border-radius: 20px;
     color: #fff;
-    background: linear-gradient(to top right, #F7E93F, #FB09B4, #9100F8);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #00FF88;
+    border: 1px solid #00FF88;
+}
+
+/* animation */
+@keyframes size {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.1)
+    }
+}
+
+@keyframes size-less {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(.98);
+    }
 }
 
 /* main style */
 
 /* Navbar style */
 header {
-    border: 1px solid blue;
-    background-color: antiquewhite;
+    background-color: #190d33;
+    padding-bottom: 100px;
 }
+
 header nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 15px 0;
     border: 1px solid rebeccapurple;
+    border-bottom: 1px solid gray;
 }
 
-nav > ul {
+nav h1 a {
+    text-decoration: none;
+    color: #fff;
+    opacity: 0.9;
+}
+
+nav>ul {
     display: flex;
     gap: 2rem;
 }
@@ -59,16 +97,80 @@ header nav li {
     list-style: none;
 }
 
+nav,
 header nav li a {
     text-decoration: none;
-    color:  #FFF;
+    color: #FFF;
     opacity: 0.9;
 }
 
-nav > span {
+nav .btn-subscribe {
+    animation: size-less 1s ease-in-out infinite alternate;
+}
+
+nav>span {
     display: none;
 }
 
+/* hero section */
+.hero-section {
+    background: url('../assets/hero-bg.png') 50% 0 / cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    padding-top: 100px;
+}
+
+.hero-section img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    height: 350px;
+    margin: 0 auto;
+}
+
+.hero-section .img-microphone {
+    top: 25%;
+    left: 41%;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+}
+
+.hero-section .new-badge {
+    font-size: 1.25rem;
+    background-color: #00FF88;
+    padding: 8px 16px;
+    border-radius: 20px;
+    position: absolute;
+    top: 21%;
+    left: 60%;
+    animation: size 1s infinite ease-in-out alternate;
+}
+
+.hero-text {
+    margin-top: 3.5rem;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-text>h1 {
+    font-size: 3.75rem;
+}
+
+.hero-text>p {
+    margin-top: 8px;
+    margin-bottom: 24px;
+}
+
+.btn-group button {
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
 
 
 
@@ -84,7 +186,18 @@ nav > span {
         display: none;
     }
 
-    nav > span {
+    nav>span {
         display: inline;
+    }
+
+
+    /* hero section */
+    .hero-section .img-microphone {
+        left: 31.5%;
+    }
+
+    /* badge*/
+    .hero-section .new-badge {
+        left: 75%;
     }
 }
